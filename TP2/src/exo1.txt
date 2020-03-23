@@ -1,0 +1,14 @@
+// 1) Le problème de publication c 'est quand un thread peut voir un champs d un objet qui n'est pas initalisé
+// 2) Oui on a un probleme de publication, un thread peut lire la valeur de value sans que ca soit initialisée
+// 3) Oui car on a pas la garantie pour le champs name, pour l'âge il est final donc on a la garantie, pour le corriger on met final sur le champs
+// 4) Non, car volatile garantie que toutes les écritures avant soient faîtes en ram
+// 5) Oui, car le this dans le thread peut être lu sans que le constructeur ait fini de construire l objet, pour corriger on prend le code du thread et le mettre dans une méthode
+// 6) Oui il marche, mais c est les parametre qu on est entrain de lire
+
+
+
+
+
+
+
+
