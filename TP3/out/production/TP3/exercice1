@@ -1,0 +1,5 @@
+1) Un programme est réentrant, si plusieurs invocations peuvent s'exécuter simultanément en toute sécurité
+donc non ré-entrant c'est le fait que lorsque l'on est dans une fonction personne d'autre n'a le droit d'être dedans (pas une autre thread et pas la même thread)
+dans le cas des locks, un lock non-reentrant est un lock que l'on peut prendre que une fois
+
+2)

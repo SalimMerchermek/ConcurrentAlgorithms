@@ -1,0 +1,10 @@
+1) Un programme est réentrant, si plusieurs invocations peuvent s'exécuter simultanément en toute sécurité
+donc non ré-entrant c'est le fait que lorsque l'on est dans une fonction personne d'autre n'a le droit d'être dedans (pas une autre thread et pas la même thread)
+dans le cas des locks, un lock non-reentrant est un lock que l'on peut prendre que une fois
+
+exercice3
+2) une thread peut etre descheduler juste apres le if, une autre vient et initialise le path, et du coup qua=nd la thread 1
+est reschedulé elle reinitialise le path
+3) probleme de publication, si la premier thread comment a initialiser le path, une deuxieme thread peut arriver
+et voir que le path n est pas null, mais elle voit pas que l initialisation n est pas encore finie
+Pour le corriger, on met le champs path en volatile
