@@ -1,0 +1,14 @@
+Exercice 2
+1) si on fait des appels bloquants on peut arrêter toutes les threads du pool et on a un deadlock
+entre la sousmission d'une nouvelle tache qui attend qu'une thread soit dispo et toutes les threads
+en attente que la tache que l'on doit soumettre est fini
+lorsque l'on fait un join() dans une RecursiveTask, on enlève la tache qui appel le join() du ForkJoinPool
+et on la remet lorsque la tache qui fait le calcul sur lequel on attend a fini son calculcomme cela pas de deadlock
+
+2) On doit utiliser commonPool()
+
+3)donc pour récapitulé, lorsque l'on est a l'extérieur et que l'on veut demander l'execution d'une tache récursive au ForkJoinPool,
+on va utiliser invoke()
+
+Exercice 3:
+L'API des stream utilise Fork/Join
